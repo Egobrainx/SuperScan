@@ -1,0 +1,401 @@
+body{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #D0D0C9;
+    overflow: hidden;
+}
+
+a{
+    color: #000;
+}
+
+/*Header Section*/
+.header{
+    background-color: #D0D0C9;
+    
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    z-index: 3;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color:#D0D0C9;
+}
+
+.header ul a{
+    display: block;
+    padding:20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.header ul a:hover{
+    background-color: #ddd;
+}
+
+.header .logo{
+    float: left;
+    position: relative;
+    bottom: 60px;
+}
+
+/*Header Menu Section*/
+.header .menu2{
+    position: relative;
+    bottom: 170px;
+    left: 200px;
+    text-align: center;
+    display: inline-flex;
+    
+}
+.header .menu{
+    position: relative;
+    bottom: 120px;
+    clear: both;
+    max-height: 0;
+    transition:max-height .2s ease-out;
+    text-align: center;
+}
+
+.header .menu-icon{
+    margin-right: 50px;
+    margin-top: 10px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.header .menu-btn{
+    display: none;
+}
+
+/*Hamburger Nav Bar*/
+.header .menu-icon .nav-icon{
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:5px;
+    transition:all .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after{
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:-5px;
+    transition:all .2s ease-out;
+}
+
+/*Hamburger Navbar Transformation*/
+.header .menu-btn:checked ~ .menu{
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top: 0;
+
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);  
+    top: 0;
+}
+
+/*Header First-Letter Feature*/
+.header span{
+    color: red;
+}
+
+/* First Section */
+.section h1{
+    font-family: 'RobofanFree', sans-serif;
+    position: relative;
+    margin-left: 60px;
+    font-size: 50px;
+    top: 130px;
+}
+.section p{
+    position: relative;
+    max-width: 700px;
+    font-family: 'Quantico';
+    margin-left: 40px;
+    font-size: 23px;
+    top: 130px;
+    padding: 20px;
+}
+/*Button Section*/
+.btn{
+    position: relative;
+    background: none;
+    text-transform: uppercase;
+    border: 4px solid red;
+    min-width: 150px;
+    padding: 12px 10px;
+    margin-top: 180px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+.buttons a{
+    text-decoration: none;
+}
+.btn1{
+    position: relative;;
+    background: red;
+    color:#D0D0C9;
+    font-weight: bold;
+    }
+.btn2{
+    position: relative;
+    color:rgba(184, 11, 11, 0.87);
+    font-weight: bold;
+    right: 30px;
+}
+
+/* Hand Image */
+.image, .image2, .image3{
+    position: relative;
+    width: 900px;
+    height: 700px;
+    float: right;
+}
+.image img{
+    position: relative;
+    margin-top: -320px;
+    width: 100%;
+    margin-left: 300px;
+}
+.image2 img{
+    position: relative;
+    margin-top: -400px;
+    width: 100%;
+    margin-left: 300px;
+}
+.image3 img{
+    position: relative;
+    margin-top: -30px;
+    width: 100%;
+    margin-left: 300px;
+}
+.inacap{
+    width: 300px;
+    position: relative;
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+/*Icons*/
+.s-m{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin-top: 80px;
+    margin-left: 20px;
+   }
+   .s-m a{
+    display:inline-flex;
+    width:80px;
+    height:80px;
+    background:black;
+    color:white;
+    margin:0 6px;
+    border-radius:50%;
+    justify-content:center;
+    align-items:center;
+    transition:0.4s;
+    font-size:22px;
+   }
+    .s-m a:hover{
+    background:#ce0909;
+   }
+   .s-m a i{
+    transition:0.2s all;
+   }
+    .s-m a:hover > i{
+    transform:scale(1.2) rotate(25deg);
+   }
+   
+
+
+@media(max-width:1920px){
+    header .menu-icon .nav-icon{
+        opacity: 0%;
+        }
+}
+
+@media (max-width:1024px){
+    
+    .hand{
+        display: none;
+    }
+    .s-m{
+        margin-top: -130px;
+    }
+
+}
+
+@media (max-width:900px){
+    header .menu-icon .nav-icon{
+        opacity: 100%;
+        }
+
+    .header .menu2{
+        display: none;
+    }
+    .s-m{
+        margin-top: 120px;
+    }
+    
+}
+   
+
+
+@media (max-width:425px){
+    .section h1{
+        font-size: 20px;
+        
+    
+    }
+    .btn1{
+        margin-left: 50px;
+        width: 80%;
+    }
+    .btn2{
+        position: relative;
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 80px;
+    }
+    .s-m{
+        margin-top: -10px;
+    }
+    .s-m a{
+        width: 50px;
+        height: 50px;
+
+    }
+    .inacap{
+    width: 200px;
+    position: relative;
+    margin-top: 120px;
+    margin-left: 50px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media Queries
+@media (max-width:1020px){
+    .header li{
+        float: left;
+    }
+    .header li a{
+        padding: 20px 30px;
+    }
+    .header .menu{
+        clear: none;
+        float: right;
+        max-height: none;
+        margin: 104px;
+        right: -100px;
+        }
+    
+    .hand{
+        display: none;
+        }
+}
+
+@media (max-width:832px){
+    .header li{
+        float: left;
+    }
+    .header li a{
+        padding: 20px 30px;
+    }
+    .header .menu{
+        clear: none;
+        float: right;
+        max-height: none;
+        padding-top: 00px;
+        right: 00px;
+        }
+    
+}
+
+@media (max-width:550px){
+    .btn1{
+        width: 80%;
+    }
+    .btn2{
+        position: relative;
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 90px;
+    }
+    .section h1{
+        font-size: 30px;  
+      }
+    .inacap{
+        width: 200px;
+        float: right;
+        padding-top: 30px;
+        margin-right: 175px;
+    }
+    .section p{
+        margin-top: 40px;
+    }
+    .image{
+        display: none;
+        }
+    }
+    */
